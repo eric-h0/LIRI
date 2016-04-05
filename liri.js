@@ -16,7 +16,7 @@ if(type == "tweets"){
     var params = {screen_name: 'E_Hizzle'};
     client.get('statuses/user_timeline', params, function(error, tweets, response){
     if (!error) {
-      for(i=0;i<20;i++){
+      for(i=0;i<process.argv[3];i++){
         console.log("\n@E_Hizzle said: ".red + "\n"+ tweets[i].text.blue + "\n" + "On: " + tweets[i].created_at.green.underline + "." + "\n")
       };
     };
