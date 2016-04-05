@@ -1,27 +1,33 @@
-var keys = require('./keys.js')
+var keys = require('./keys.js');
+var request = require ("request");
+var type = process.argv[2];
 
-//Something like this.
-// switch (process.argv[2]) {
-//   case "my-tweets";
-//     twitter();
-//     break;
-//   case "spotify-this-song";
-//     spotify();
-//     break;
-//   case "movie-this";
-//     omdb();
-//   case "do-what-it-says";
-//     whatItSays();
-//   default:
-//     console.log("I do not understand you, human.")
-// }
+if(type == "my-tweets"){
+  console.log("Twitter")
+}
 
-// Make it so liri.js can take in one of the following arguments
+if(type == "spotify-this-song"){
+  console.log("Spotify")
+}
 
-// my-tweets
+if(type == "movie-this"){
+  var movie = process.argv[3];
+  request('http://www.omdbapi.com/?t='+movie+'&y=&plot=short&tomatoes=true&r=json', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+       var json = JSON.parse(body);
+       console.log("Title: "+json.Title);
+       console.log("Year: "+json.Year);
+       console.log("IMDB Rating: "+json.imdbRating);
+       console.log("Country: "+json.Country);
+       console.log("Language: "+json.Language);
+       console.log("Plot: "+json.Plot);
+       console.log("Actors: "+json.Actors);
+       console.log("Rotten Tomatoes rating: "+json.tomatoRating);
+       console.log("Rotten Tomatoes URL: "+json.tomatoURL);
+       }
+    })
+};
 
-// spotify-this-song
-
-// movie-this
-
-// do-what-it-says
+if(type == "do-what-it-says"){
+  console.log("Do what it says.")
+}
