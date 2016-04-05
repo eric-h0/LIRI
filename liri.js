@@ -37,7 +37,7 @@ if(type == "movie"){
          console.log("IMDB Rating".bold.underline+": "+json.imdbRating.green + ".");
          console.log("Country".bold.underline+": "+json.Country.green + ".");
          console.log("Language".bold.underline+": "+json.Language.green + ".");
-         console.log("Plot".bold.underline+": "+json.Plot.green + ".");
+         console.log("Plot".bold.underline+": "+json.Plot.green);
          console.log("Actors".bold.underline+": "+json.Actors.green + ".");
          console.log("Rotten Tomatoes rating".bold.underline+": "+json.tomatoRating.green + ".");
          console.log("Rotten Tomatoes URL".bold.underline+": "+json.tomatoURL.green+ "." + "\n");
