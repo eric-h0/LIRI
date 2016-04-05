@@ -17,7 +17,7 @@ if(type == "tweets"){
     client.get('statuses/user_timeline', params, function(error, tweets, response){
     if (!error) {
       for(i=0;i<20;i++){
-        console.log("\n@E_Hizzle said: ".red + "\n"+ tweets[i].text.blue + "\n" + "On: " + tweets[i].created_at.green + "." + "\n")
+        console.log("\n@E_Hizzle said: ".red + "\n"+ tweets[i].text.blue + "\n" + "On: " + tweets[i].created_at.green.underline + "." + "\n")
       };
     };
   });  
