@@ -25,7 +25,7 @@ if(type == "tweets"){
 
 if(type == "spotify"){
   console.log("Spotify")
-};
+}; 
 
 if(type == "movie"){
   var movie = process.argv[3];
