@@ -14,12 +14,12 @@ var client = new Twitter({
 
 if(type == "tweets"){
   // console.log("Twitter")
-  var params = {screen_name: 'E_Hizzle'};
-  client.get('statuses/user_timeline', params, function(error, tweets, response){
-  if (!error) {
-    console.log(tweets);
-  }
-});
+    var params = {screen_name: 'E_Hizzle'};
+    client.get('statuses/user_timeline', params, function(error, tweets, response){
+    if (!error) {
+      console.log(tweets);
+    }
+  });
 };
 
 if(type == "spotify"){
