@@ -5,7 +5,7 @@ var Twitter = require('twitter');
 var spotify = require('spotify');
 var colors  = require('colors');
 var type    = process.argv[2];
-var client = new Twitter({
+var client  = new Twitter({
   consumer_key: 'GsXabDjw7KZwCvI3O38TVen1d',
   consumer_secret: 'biWBL3MuKq1kFVxtNBv3Y0LhVM23xwnBsDF3Kmabhkz6tZTnwG',
   access_token_key: '166452344-FLd0gUjnJ7p5wTVSiRJAYInaXva5y0VmDoNDmVkX',
@@ -13,14 +13,13 @@ var client = new Twitter({
 });
 
 if(type == "tweets"){
-  // console.log("Twitter")
     var params = {screen_name: 'E_Hizzle'};
     client.get('statuses/user_timeline', params, function(error, tweets, response){
     if (!error) {
       for(i=0;i<20;i++){
         console.log("\n@E_Hizzle said: ".red + "\n"+ tweets[i].text.blue + "\n" + "On: " + tweets[i].created_at.green + "." + "\n")
-      }
-    }
+      };
+    };
   });  
 };
 
