@@ -32,15 +32,15 @@ if(type == "movie"){
   request('http://www.omdbapi.com/?t='+movie+'&y=&plot=short&tomatoes=true&r==json', function (error, response, body) {
     if (!error && response.statusCode == 200){
          var json = JSON.parse(body);
-         console.log("\nTitle".bold.underline+": "+json.Title.rainbow.underline);
-         console.log("Year".bold.underline+": "+json.Year.green);
-         console.log("IMDB Rating".bold.underline+": "+json.imdbRating.green);
-         console.log("Country".bold.underline+": "+json.Country.green);
-         console.log("Language".bold.underline+": "+json.Language.green);
-         console.log("Plot".bold.underline+": "+json.Plot.green);
-         console.log("Actors".bold.underline+": "+json.Actors.green);
-         console.log("Rotten Tomatoes rating".bold.underline+": "+json.tomatoRating.green);
-         console.log("Rotten Tomatoes URL".bold.underline+": "+json.tomatoURL.green+"\n");
+         console.log("\nTitle".bold.underline+": "+json.Title.rainbow.underline + ".");
+         console.log("Year".bold.underline+": "+json.Year.green + ".");
+         console.log("IMDB Rating".bold.underline+": "+json.imdbRating.green + ".");
+         console.log("Country".bold.underline+": "+json.Country.green + ".");
+         console.log("Language".bold.underline+": "+json.Language.green + ".");
+         console.log("Plot".bold.underline+": "+json.Plot.green + ".");
+         console.log("Actors".bold.underline+": "+json.Actors.green + ".");
+         console.log("Rotten Tomatoes rating".bold.underline+": "+json.tomatoRating.green + ".");
+         console.log("Rotten Tomatoes URL".bold.underline+": "+json.tomatoURL.green+ "." + "\n");
          };
     });
 };
