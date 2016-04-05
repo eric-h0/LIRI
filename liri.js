@@ -14,10 +14,13 @@ var client = new Twitter({
 
 if(type == "tweets"){
   // console.log("Twitter")
+    console.log("Last twenty tweets.".bold)
     var params = {screen_name: 'E_Hizzle'};
     client.get('statuses/user_timeline', params, function(error, tweets, response){
     if (!error) {
-      console.log(tweets);
+      for(i=0;i<20;i++){
+        console.log("\n@E_Hizzle said: ".red + "\n"+ tweets[i].text.cyan + "\n" + "On: " + tweets[i].created_at.green + "\n")
+      }
     }
   });
 };
