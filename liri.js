@@ -21,7 +21,7 @@ if(type == "tweets"){
         console.log("\n@E_Hizzle said: ".red + "\n"+ tweets[i].text.blue + "\n" + "On: " + tweets[i].created_at.green + "." + "\n")
       }
     }
-  });
+  });  
 };
 
 if(type == "spotify"){
