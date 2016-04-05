@@ -1,9 +1,9 @@
-var fs=require('fs');
-var keys = require('./keys.js');
+var fs      = require('fs');
+var keys    = require('./keys.js');
 var request = require ("request");
-var type = process.argv[2];
 var Twitter = require('twitter');
 var spotify = require('spotify');
+var type    = process.argv[2];
 
 if(type == "tweets"){
   console.log("Twitter")
