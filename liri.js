@@ -6,10 +6,10 @@ var spotify = require('spotify');
 var colors = require('colors');
 var type = process.argv[2];
 var client = new Twitter({
-  consumer_key: 'GsXabDjw7KZwCvI3O38TVen1d',
-  consumer_secret: 'biWBL3MuKq1kFVxtNBv3Y0LhVM23xwnBsDF3Kmabhkz6tZTnwG',
-  access_token_key: '166452344-FLd0gUjnJ7p5wTVSiRJAYInaXva5y0VmDoNDmVkX',
-  access_token_secret: '8UW9NLgrzQMAPtj5119bp7qvVlOu4k3vGzL5vfPGW7BSJ'
+    consumer_key: keys.twitterKeys.consumer_key,
+    consumer_secret: keys.twitterKeys.consumer_secret,
+    access_token_key: keys.twitterKeys.access_token_key,
+    access_token_secret: keys.twitterKeys.access_token_secret,
 });
 
 if (type == "tweets") {
