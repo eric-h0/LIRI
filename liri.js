@@ -65,7 +65,3 @@ if (type == "movie") {
     };
   });
 };
-
-if (type == "do-what-it-says") {
-  console.log("Do what it says.")
-};
