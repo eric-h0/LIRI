@@ -1,0 +1,19 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "Has functions such as: ## Showing movie information (OMDB API): <img src=\"https://raw.githubusercontent.com/eric-h0/LIRI/screenshots/screenshots/movie.png\" width=\"100%\" height=\"auto\" align=\"center\"/> <br><br> ## Showing Tweets (Twitter API): <img src=\"https://raw.githubusercontent.com/eric-h0/LIRI/screenshots/screenshots/twitter.png\" width=\"100%\" height=\"auto\" align=\"center\"/> <br><br> ## Giving Information about music artists(Spotify API): <img src=\"https://raw.githubusercontent.com/eric-h0/LIRI/screenshots/screenshots/spotify.png\" width=\"100%\" height=\"auto\" align=\"center\"/>",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-h0/LIRI.git"
+  },
+  "author": "Eric Ho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eric-h0/LIRI/issues"
+  },
+  "homepage": "https://github.com/eric-h0/LIRI#readme"
+}
