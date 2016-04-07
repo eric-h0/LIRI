@@ -57,6 +57,9 @@ if (type == "spotify") {
 
 if (type == "movie") {
   var movie = process.argv[3];
+  if (movie == undefined) {
+    movie = "The Boondock Saints"
+  }
   request('http://www.omdbapi.com/?t=' + movie + '&y=&plot=short&tomatoes=true&r==json', function(error, response, body) {
     if (!error && response.statusCode == 200) {
       var json = JSON.parse(body);
