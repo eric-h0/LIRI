@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/eric-h0/LIRI/issues"
   },
-  "homepage": "https://github.com/eric-h0/LIRI#readme"
+  "homepage": "https://github.com/eric-h0/LIRI#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "fs": "0.0.2",
+    "omdb": "^0.5.0",
+    "request": "^2.70.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.2.5"
+  }
 }
