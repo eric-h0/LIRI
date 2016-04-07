@@ -6,10 +6,10 @@ var spotify = require('spotify');
 var colors = require('colors');
 var type = process.argv[2];
 var client = new Twitter({
-    consumer_key: keys.twitterKeys.consumer_key,
-    consumer_secret: keys.twitterKeys.consumer_secret,
-    access_token_key: keys.twitterKeys.access_token_key,
-    access_token_secret: keys.twitterKeys.access_token_secret,
+  consumer_key: keys.twitterKeys.consumer_key,
+  consumer_secret: keys.twitterKeys.consumer_secret,
+  access_token_key: keys.twitterKeys.access_token_key,
+  access_token_secret: keys.twitterKeys.access_token_secret,
 });
 
 if (type == "tweets") {
@@ -33,15 +33,16 @@ if (type == "spotify") {
       console.log('Error occurred: ' + err);
       return;
     }
-
     var items = data.tracks.items;
     for (i = 0; i < items.length; ++i) {
-      console.log("\nSong Name: ".bold.green + items[i].name.rainbow);
-      console.log("Spotify Link: ".bold.green + items[i].preview_url.blue);
-      console.log("Album Name: ".bold.green + items[i].album.name.red);
+      console.log("\n" + "Song information for query".bold + ": " + '"' + songTitle + '"' + ".");
+      console.log("Song Name: ".bold.green + items[i].name.rainbow);
       for (k = 0; k < items[i].artists.length; ++k) {
         console.log("Artist: ".bold.green + items[i].artists[k].name.red);
       }
+      console.log("Album Name: ".bold.green + items[i].album.name.red);
+
+      console.log("Spotify Link: ".bold.green + items[i].preview_url.blue);
     }
     console.log("\n");
 
